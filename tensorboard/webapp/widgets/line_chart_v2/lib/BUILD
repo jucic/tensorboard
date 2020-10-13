@@ -4,7 +4,10 @@ package(default_visibility = ["//tensorboard:internal"])
 
 tf_ts_library(
     name = "types",
-    srcs = ["types.ts"],
+    srcs = [
+        "scale_types.ts",
+        "types.ts",
+    ],
 )
 
 tf_ts_library(
@@ -32,14 +35,28 @@ tf_ts_library(
 )
 
 tf_ts_library(
+    name = "scale",
+    srcs = [
+        "scale.ts",
+    ],
+    deps = [
+        ":types",
+        "@npm//@types/d3",
+        "@npm//d3",
+    ],
+)
+
+tf_ts_library(
     name = "lib_tests",
     testonly = True,
     srcs = [
         "layout_test.ts",
+        "scale_test.ts",
         "worker_pool_test.ts",
     ],
     deps = [
         ":layout",
+        ":scale",
         ":types",
         ":worker",
         ":worker_pool",

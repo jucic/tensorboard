@@ -13,21 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-export * from './scale_types';
-
-export interface Dimension {
-  width: number;
-  height: number;
-}
-
-export interface Rect {
-  x: number;
-  width: number;
-  y: number;
-  height: number;
-}
-
-export interface Extent {
-  x: [number, number];
-  y: [number, number];
+export enum ScaleType {
+  LINEAR,
+  LOG10,
 }
