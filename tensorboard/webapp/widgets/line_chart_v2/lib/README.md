@@ -13,3 +13,4 @@ This is a generic charting library with a focus on performance.
 - layout: a rectangular structure inside a chart that can have width and height.
 - drawable: a layout that draws content
 - data drawable: a drawable (and transitively a layout) that renders data of a chart.
+- coordinatior: A utility module for converting coordinate systems. Abstracts away certain renderer quirks and holds onto state, helping with performance optimizations.
