@@ -14,7 +14,7 @@ limitations under the License.
 ==============================================================================*/
 
 import {RectLayout, LayoutStrategy, LayoutOption} from './layout';
-import {Rect} from './types';
+import {Rect} from '../types';
 
 export class CompositeLayout extends RectLayout {
   private readonly superposedLayouts: RectLayout[];

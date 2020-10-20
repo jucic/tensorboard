@@ -25,16 +25,6 @@ tf_ts_library(
 )
 
 tf_ts_library(
-    name = "layout",
-    srcs = [
-        "composite_layout.ts",
-        "flex_layout.ts",
-        "layout.ts",
-    ],
-    deps = [":types"],
-)
-
-tf_ts_library(
     name = "worker_pool",
     srcs = ["worker_pool.ts"],
     deps = [
@@ -75,13 +65,11 @@ tf_ts_library(
     testonly = True,
     srcs = [
         "coordinator_test.ts",
-        "layout_test.ts",
         "scale_test.ts",
         "worker_pool_test.ts",
     ],
     deps = [
         ":coordinator",
-        ":layout",
         ":scale",
         ":types",
         ":worker",

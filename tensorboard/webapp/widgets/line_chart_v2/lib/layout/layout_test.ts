@@ -16,7 +16,7 @@ limitations under the License.
 import {CompositeLayout} from './composite_layout';
 import {FlexLayout} from './flex_layout';
 import {RectLayout, LayoutOption, LayoutStrategy} from './layout';
-import {Rect} from './types';
+import {Rect} from '../types';
 
 class FixedWidthHeightLayout extends RectLayout {
   constructor(config: LayoutOption, contentGrid: RectLayout[][] = []) {
@@ -58,7 +58,7 @@ class HundredWidthLayout extends RectLayout {
 
 const option = {container: document.body};
 
-describe('line_chart_v2/lib/layout test', () => {
+describe('line_chart_v2/lib/layout/layout test', () => {
   function assertLayout(rootLayout: RectLayout, expected: Rect[][]) {
     const contentGrid = rootLayout.getContentGrid();
 
